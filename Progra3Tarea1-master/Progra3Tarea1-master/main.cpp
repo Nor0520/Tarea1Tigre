@@ -50,36 +50,69 @@ int getMenor(int a, int b)
 //Devuelve el numero mayor entre a (dado), b (dado) y c (dado)
 int getMayor(int a, int b, int c)
 {
-    return -1;
+    int mayor=a;
+
+    if(b>c && b>a){
+        mayor=b;
+    }else if(c>b && c>a){
+        mayor=c;
+    }
+
+    return mayor;
+
 }
 
 //Establece el valor (dado) en el arreglo (dado) en el indice posicion (dado)
 void setValor(int arreglo[], int valor, int posicion)
 {
+    arreglo[posicion]=valor;
+
 }
 
 //Obtiene y devuelve el valor del arreglo (dado) en el indice posicion (dado)
 int getValor(int arreglo[], int posicion)
 {
-    return -1;
+    return arreglo[posicion];
 }
 
 //Devuelve el numero mayor del arreglo (dado) que contiene tamano (dado) elementos
 int getMayor(int arreglo[], int tamano)
 {
-    return -1;
+   int mayor=arreglo[0];
+
+   for(int x=0;x<tamano;x++){
+    if(mayor<arreglo[x]){
+        mayor=arreglo[x];
+    }
+   }
+   return mayor;
 }
 
 //Devuelve el numero menor del arreglo (dado) que contiene tamano (dado) elementos
 int getMenor(int arreglo[], int tamano)
 {
-    return -1;
+    int menor=arreglo[0];
+
+   for(int x=0;x<tamano;x++){
+    if(menor>arreglo[x]){
+        menor=arreglo[x];
+    }
+   }
+   return menor;
 }
 
 //Devuelve el promedio de los numeros del arreglo (dado) que contiene tamano (dado) elementos
 int getPromedio(int arreglo[], int tamano)
 {
-    return -1;
+    int promedio,suma=0;
+    for(int x=0;x<tamano;x++){
+    suma=arreglo[x];
+
+    for(int y=0;y<tamano;y++){
+        promedio=(suma/arreglo[x]);
+    }
+   }
+   return promedio;
 }
 
 int main ()
